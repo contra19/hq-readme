@@ -27,6 +27,8 @@ Readme Generator is a Node.js application that will help the user generate a hig
 
 Note: Most questions will open your preferred text editor to allow for paragraph style answers, easier editing of the text and ability to create numbered lists. When you complete your answer in the editor you will need to save and close the file for your answer to be recorded.
 
+[Usage Example Video](https://drive.google.com/file/d/1shArPNsBZRepGAegYm_k3vTFU7Q1eQR6/view?usp=sharing)
+
 ## LICENSE
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
