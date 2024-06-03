@@ -15,13 +15,14 @@ Readme Generator is a Node.js application that will help the user generate a hig
 
 
 ## INSTALLATION
-1. Clone or Fork the repository in to a directory on your local machine.
-2. Install Node.js in to the same directory you cloned the repo into.
-3. Us the npm install command to install all of the node module dependencies
+1. Ensure that Node.js is installed on your machine.
+2. Clone or Fork the repository in to a directory on your local machine.
+3. Use your favorite terminal application to open the cloned/forked directory.
+4. Use the 'npm install' command to install all of the node module dependencies.
 
 ## USAGE
 1. Open your preferred terminal application.
-2. Use the command node index.js to start the application.
+2. Use the command 'node index.js' to start the application.
 3. Answer the questions as they are presented.
 
 Note: Most questions will open your preferred text editor to allow for paragraph style answers, easier editing of the text and ability to create numbered lists. When you complete your answer in the editor you will need to save and close the file for your answer to be recorded.
