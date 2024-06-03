@@ -26,11 +26,13 @@ function renderTableOfContents(data) {
   return tableOfContents;
 }
 
-// function to render the contributions section
-function renderContributions(contributions) {
+// function to render the contributions section. If contributions are allowed instructions are printed with a link to the code of conduct. 
+// If contributions are not allowed, a message is printed stating that contributions are not allowed.
+function renderContributions(contributions, contributionInstructions) {
   if (contributions && contributions.toLowerCase() === 'yes') {
-    return `Contributions are accepted via GitHub. If you are interested in contributing to this project, please review the Contributor Covenant by clicking on the badge below.
-    \n\n[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)`;
+    return `${contributionInstructions}\n\n 
+If you are interested in contributing, please review the [Contributor Covenant](code_of_conduct.md).\n\n
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)`;
   } else {
     return 'This project is not accepting contributions at this time.';
   }
@@ -118,13 +120,13 @@ function renderLicenseSection(license) {
 function renderQuestions(data) {
   return `If you should have any questions please contact the creator of this project at either of the following:\n
 github: [${data.username}](https://github.com/${data.username})\n
-email: [${data.email}](mailto:${data.email});`
+email: [${data.email}](mailto:${data.email})`;
 }
 
 // function to generate the markdown for the README file
 function generateMarkdown(data) {
   const tableOfContents = renderTableOfContents(data);
-  const contributingSection = renderContributions(data.contributions);
+  const contributingSection = renderContributions(data.contributions, data.contributionInstructions);
   const licenseSection = renderLicenseSection(data.license);
   const questionsSection = renderQuestions(data);
   const licenseBadge = renderLicenseBadge(data.license);
@@ -132,11 +134,11 @@ function generateMarkdown(data) {
   return `
 # ${data.title} ${licenseBadge}
 
-## Table of Contents
-${tableOfContents}
-
 ## DESCRIPTION
 ${data.description}
+
+## Table of Contents
+${tableOfContents}
 
 ## INSTALLATION
 ${data.installation}
@@ -154,5 +156,7 @@ ${contributingSection}
 ${data.tests}
 
 ## Questions
-${questionsSection}`;
+${questionsSection}
+
+This Readme was generated using [README Generator](https://github.com/contra19/hq-readme) created by [Contra19](https://github.com/contra19)`;
 }
