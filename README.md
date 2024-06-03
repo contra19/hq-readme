@@ -1,5 +1,8 @@
 
-# sdhfgasjhdgf [![License: MPL 2.0](https://img.shields.io/badge/license-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+# Readme Generator [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## DESCRIPTION
+Readme Generator is a Node.js application that will help the user generate a high quality Readme.md file. The user is asked several questions and based on the user input the responses are translated in to sections of the Readme.md file.
 
 ## Table of Contents
 * [Description](#description)
@@ -11,30 +14,38 @@
 * [Questions](#questions)
 
 
-## DESCRIPTION
-asdkjfghkahsdgf
-
 ## INSTALLATION
-asdekhfkshdgf
+1. Clone or Fork the repository in to a directory on your local machine.
+2. Install Node.js in to the same directory you cloned the repo into.
+3. Us the npm install command to install all of the node module dependencies
 
 ## USAGE
-asdkhjfgashdg
+1. Open your preferred terminal application.
+2. Use the command node index.js to start the application.
+3. Answer the questions as they are presented.
+
+Note: Most questions will open your preferred text editor to allow for paragraph style answers, easier editing of the text and ability to create numbered lists. When you complete your answer in the editor you will need to save and close the file for your answer to be recorded.
 
 ## LICENSE
-This project is licensed under the [Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0).
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Contributing
-Contributions are accepted via GitHub. If you are interested in contributing to this project, please review the Contributor Covenant by clicking on the badge below.
-    
+If you would like to contribute to this project, please fork the repository and make your changes there. Once the changes are made you can present the forked repository for review and merge in to the main code.
+
+ 
+If you are interested in contributing, please review the [Contributor Covenant](code_of_conduct.md).
+
 
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
   
 ## TESTS
-fadjghkjfd
+There is currently no test suite or tests for this application.
 
 ## Questions
 If you should have any questions please contact the creator of this project at either of the following:
 
 github: [contra19](https://github.com/contra19)
 
-email: [contra19@gmail.com](mailto:contra19@gmail.com);
+email: [contra19@gmail.com](mailto:contra19@gmail.com)
+
+This Readme was generated using [README Generator](https://github.com/contra19/hq-readme) created by [Contra19](https://github.com/contra19)

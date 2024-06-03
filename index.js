@@ -4,6 +4,7 @@ const fs = require('fs');
 const colors = require('colors');
 const generateMarkdown = require('./js/generateMarkdown.js');
 
+
 // Create an array of questions for user input
 const questions = [
     {
@@ -12,19 +13,37 @@ const questions = [
         message: `What is the ${colors.cyan('TITLE')} of your project?`,
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'description',
-        message: `Provide a ${colors.cyan('DESCRIPTION')} of your project:`,
+        message: `Please provide a ${colors.cyan('DESCRIPTION')} of your project:`,
+        validate: function (text) {
+            if (text.trim().length === 0) {
+                return 'Description cannot be empty. Please provide a description. Make sure to save your response in the external editor for it to be recorded.';
+            }
+            return true;
+        }
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'installation',
         message: `Please provide the ${colors.cyan('INSTALLATION')} instructions for your project:`,
+        validate: function (text) {
+        if (text.trim().length === 0) {
+            return 'Installation instructions cannot be empty. Please provide the instructions. Make sure to save your response in the external editor for it to be recorded.';
+        }
+        return true;
+    }
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'usage',
         message: `What are the ${colors.cyan('USAGE')} instructions for your project:`,
+        validate: function (text) {
+            if (text.trim().length === 0) {
+                return 'Usage instructions cannot be empty. Please provide the usage instructions. Make sure to save your response in the external editor for it to be recorded.';
+            }
+            return true;
+        }
     },
     {
         type: 'list',
@@ -42,9 +61,29 @@ const questions = [
         choices: ['Yes', 'No'],
     },
     {
-        type: 'input',
+        type: 'editor',
+        name: 'contributionInstructions',
+        message: `Please provide the ${colors.cyan('CONTRIBUTION INSTRUCTIONS')}:`,
+        when: function (answers) {
+            return answers.contributions === 'Yes';
+        },
+        validate: function (text) {
+            if (text.trim().length === 0) {
+                return 'Contribution instructions cannot be empty. Please provide the instructions.';
+            }
+            return true;
+        }
+    },
+    {
+        type: 'editor',
         name: 'tests',
-        message: `Are there any ${colors.cyan('TESTING')} instructions:`,
+        message: `Please provide the ${colors.cyan('TESTING')} instructions:`,
+        validate: function (text) {
+            if (text.trim().length === 0) {
+                return 'Testing instructions cannot be empty. Please provide the instructions. Make sure to save your response in the external editor for it to be recorded.';
+            }
+            return true;
+        }
     },
     {
         type: 'input',
